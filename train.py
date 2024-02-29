@@ -1,7 +1,7 @@
 import keras
 import keras.backend as K
 import numpy as np
-from keras.utils import generic_utils
+from tensorflow.keras.utils import generic_utils
 from keras.optimizers import Adam, SGD
 from models import discriminator, generator,generator2,GAN
 from fish_dataset import load_dataset, load_dataset_data_augument
