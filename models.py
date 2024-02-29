@@ -1,13 +1,13 @@
 import numpy as np
 import keras
-from keras import backend as K
-from keras.models import Sequential, Model
-from keras.layers import Dense,Reshape, Input,merge
-from keras.layers.merge import concatenate
-from keras.layers.core import Activation, Dropout, Flatten,Lambda
-from keras.layers.normalization import BatchNormalization
-from keras.layers.convolutional import UpSampling2D,Conv2D, MaxPooling2D,Conv2DTranspose
-from keras.layers.advanced_activations import LeakyReLU
+from tensorflow.keras import backend as K
+from tensorflow.keras.models import Sequential, Model
+from tensorflow.keras.layers import Dense,Reshape, Input,merge
+from tensorflow.keras.layers import concatenate
+from tensorflow.keras.layers.core import Activation, Dropout, Flatten,Lambda
+from tensorflow.keras.layers import BatchNormalization
+from tensorflow.keras.layers import UpSampling2D,Conv2D, MaxPooling2D,Conv2DTranspose
+from tensorflow.keras.layers import LeakyReLU
 
 # convolution batchnormalization relu
 def CBR(ch,shape,bn=True,sample='down',activation=LeakyReLU, dropout=False):
