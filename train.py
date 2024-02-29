@@ -31,10 +31,10 @@ def train():
 
     # set gpu environment
     os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu)
-    config = tf.ConfigProto()
+    config = tf.compat.v1.ConfigProto()
     config.gpu_options.allow_growth = True
-    sess = tf.Session(config = config)
-    K.set_session(sess)
+    sess = tf.compat.v1.Session(config=config)
+    tf.compat.v1.keras.backend.set_session(sess)
 
 
 
